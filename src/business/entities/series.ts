@@ -4,6 +4,7 @@ export class Series {
         private id: string,
         private title: string,
         private debut_date: Date,
+        private link: string,
         private image: string,
         private sinopse: string,
 
@@ -31,6 +32,14 @@ export class Series {
         
         public setDebut_date(debut_date: Date): void {
             this.debut_date = debut_date;
+        }
+
+        public getLink(): string {
+            return this.link;
+        }
+        
+        public setLink(link: string): void {
+            this.link = link;
         }
    
         

@@ -1,3 +1,4 @@
+import { Request, Response } from "express";
 import { CreateFilmsUC } from "../../../business/usecase/films/createFilms";
 import { FilmsDB } from "../../../data/filmsDB";
 
