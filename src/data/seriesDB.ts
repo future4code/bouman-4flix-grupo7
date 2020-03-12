@@ -9,12 +9,11 @@ export class SeriesDB extends BaseDB {
         await this.connection.raw(`
             INSERT INTO ${
             this.seriesTableName
-            }(id, title, debut_date, link, image, sinopse)
+            }(id, title, debut_date, image, sinopse)
             VALUES(
                 '${series.getId()}',
                 '${series.getTitle()}',
                 '${series.getDebut_date()}',
-                '${series.getLink()}',
                 '${series.getImage}',
                 '${series.getSinopse}'
             );

@@ -12,7 +12,6 @@ export class CreateSeriesUC {
             id,
             input.title,
             input.debut_date,
-            input.link,
             input.image,
             input.sinopse
         );
@@ -28,7 +27,6 @@ export class CreateSeriesUC {
 export interface CreateSeriesUCInput {
     title: string,
     debut_date: Date,
-    link: string,
     image: string,
     sinopse: string
 }
