@@ -3,9 +3,8 @@ import { Films } from "../business/entities/films";
 
 
 export class FilmsDB extends BaseDB {
-    private filmsTableName = "FILMS_TABLE";
-    private seriesTableName = "SERIES_TABLE";
-    private episodesTableName = "EPISODES_TABLE";
+    private filmsTableName = "films";
+    
 
     public async createFilms(films: Films): Promise<void>{
         await this.connection.raw(`
