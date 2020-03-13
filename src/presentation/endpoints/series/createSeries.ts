@@ -9,13 +9,14 @@ export const createSeriesEndpoint = async (req: Request, res: Response) => {
             title: req.body.title,
             debut_date: req.body.debut_date,
             image: req.body.image,
-            sinopse: req.body.sinopse
+            sinopse: req.body.sinopse,
+            length: req.body.length
         })
-
+ 
         res.status(200).send(result);
     } catch (err) {
         res.status(err.errorCode || 400).send({
             message: err.message
         });
     }
-}
+} 

@@ -20,5 +20,5 @@ export const createFilmsEndpoint = async (req: Request, res: Response) => {
         message: err.message
       });
     }
-  };
+  }; 
   
