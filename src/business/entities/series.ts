@@ -1,4 +1,3 @@
-
 export class Series {
     constructor(
         private id: string,
@@ -57,3 +56,4 @@ export class Series {
             this.length = length;
         }
     }
+

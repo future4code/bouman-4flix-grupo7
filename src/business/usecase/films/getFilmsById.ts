@@ -10,7 +10,6 @@ export class GetFilmsByIdUC {
         if(!films) {
             throw new Error("Film not found");
         }
-
         return{
             id: films.getId(),
             title: films.getTitle(),

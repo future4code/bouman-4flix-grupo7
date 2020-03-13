@@ -64,7 +64,5 @@ export class Films {
         public setImage(image: string): void {
             this.image = image;
         }
+        
     }
-
-
- 
