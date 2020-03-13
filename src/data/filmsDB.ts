@@ -24,8 +24,7 @@ export class FilmsDB extends BaseDB {
           );
         `)
     }
-
-
+ 
     private mapDbFilmToFilm(input?: any): Films | undefined {
         return (
           input &&
@@ -41,11 +40,15 @@ export class FilmsDB extends BaseDB {
         );
       }
 
-
     public async getFilmsById(id: string): Promise<Films | undefined> {
         const result = await this.connection.raw(`
             SELECT * FROM ${this.filmsTableName} WHERE id='${id}'
         `);
         return this.mapDbFilmToFilm(result[0][0])
     }
+
+
+
+    
+
 }

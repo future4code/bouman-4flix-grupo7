@@ -1,12 +1,9 @@
 
-export class Films {
+export class FilmsAndSeries {
     constructor(
         private id: string,
         private title: string,
-        private debut_date: Date,
         private sinopse: string,
-        private link: string,
-        private length: number,
         private image: string
         ){ }
         
@@ -25,14 +22,6 @@ export class Films {
         public setTitle(title: string): void {
             this.title = title;
         }
-        
-        public getDebut_date(): Date {
-            return this.debut_date;
-        }
-        
-        public setDebut_date(debut_date: Date): void {
-            this.debut_date = debut_date;
-        }
    
         public getSinopse(): string {
             return this.sinopse;
@@ -42,21 +31,6 @@ export class Films {
             this.sinopse = sinopse;
         }
         
-        public getLink(): string {
-            return this.link;
-        }
-        
-        public setLink(link: string): void {
-            this.link = link;
-        }
-        public getLength(): number {
-            return this.length;
-        }
-        
-        public setLength(length: number): void {
-            this.length = length;
-        }
-
         public getImage(): string {
             return this.image;
         }

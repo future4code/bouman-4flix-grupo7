@@ -13,9 +13,10 @@ export class CreateSeriesUC {
             input.title,
             input.debut_date,
             input.image,
-            input.sinopse
+            input.sinopse,
+            input.length
         );
-
+ 
         await this.db.createSeries(series);
 
         return {
@@ -28,7 +29,8 @@ export interface CreateSeriesUCInput {
     title: string,
     debut_date: Date,
     image: string,
-    sinopse: string
+    sinopse: string,
+    length: number;
 }
 
 export interface CreateSeriesUCOutput {
