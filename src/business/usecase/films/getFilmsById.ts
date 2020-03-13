@@ -33,5 +33,5 @@ export interface GetFilmsByIdUCOutput {
     sinopse: string,
     link: string,
     length: number,
-    image?: string
+    image: string
 }

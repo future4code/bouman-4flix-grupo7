@@ -4,7 +4,8 @@ export class Series {
         private title: string,
         private debut_date: Date,
         private image: string,
-        private sinopse: string
+        private sinopse: string,
+        private length: number
         ){ }
         
         public getId(): string {
@@ -39,13 +40,20 @@ export class Series {
             this.sinopse = sinopse;
         }
         
-        public getImage(): string | undefined {
+        public getImage(): string {
             return this.image;
         }
         
         public setImage(image: string): void {
             this.image = image;
         }
+
+        public getLength(): number {
+            return this.length;
+        }
+        
+        public setLength(length: number): void {
+            this.length = length;
+        }
     }
 
-    
