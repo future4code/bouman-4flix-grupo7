@@ -65,3 +65,6 @@ export class Films {
             this.image = image;
         }
     }
+
+
+
