@@ -19,4 +19,26 @@ export class EpisodesDB extends BaseDB {
             );
         `)
     }
+
+    private mapDbEpisodesToEpisodes(input?: any): Episodes | undefined {
+        return (
+          input &&
+          new Episodes(
+            input.id,
+            input.title,
+            input.debut_date,
+            input.sinopse,
+            input.length,
+            input.image
+          )
+        );
+      }
+
+    public async getEpisodesById(id: string): Promise<Episodes | undefined> {
+        const result = await this.connection.raw(`
+            SELECT * FROM ${this.episodesTableName} WHERE id='${id}'
+        `);
+        return this.mapDbEpisodesToEpisodes(result[0][0])
+    }
+
 }
