@@ -47,8 +47,4 @@ export class FilmsDB extends BaseDB {
         return this.mapDbFilmToFilm(result[0][0])
     }
 
-
-
-    
-
 }
