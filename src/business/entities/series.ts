@@ -1,12 +1,10 @@
-
 export class Series {
     constructor(
         private id: string,
         private title: string,
         private debut_date: Date,
         private image: string,
-        private sinopse: string,
-
+        private sinopse: string
         ){ }
         
         public getId(): string {
@@ -49,3 +47,5 @@ export class Series {
             this.image = image;
         }
     }
+
+    

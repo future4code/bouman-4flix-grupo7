@@ -7,6 +7,9 @@ export class GetFilmsByIdUC {
 
         const films = await this.db.getFilmsById(input.id);
 
+        if(!films) {
+            throw new Error("Film not found");
+        }
         return{
             id: films.getId(),
             title: films.getTitle(),
