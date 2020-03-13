@@ -8,7 +8,6 @@ export const createSeriesEndpoint = async (req: Request, res: Response) => {
         const result = await createSeriesUC.execute({
             title: req.body.title,
             debut_date: req.body.debut_date,
-            link: req.body.link,
             image: req.body.image,
             sinopse: req.body.sinopse
         })
